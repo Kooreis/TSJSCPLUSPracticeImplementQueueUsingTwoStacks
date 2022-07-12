@@ -1,15 +1,9 @@
-class Stack<T> {
-    private items: T[] = [];
+class Queue<T> {
+    private stack1: Stack<T>;
+    private stack2: Stack<T>;
 
-    push(item: T) {
-        this.items.push(item);
-    }
-
-    pop(): T | undefined {
-        return this.items.pop();
-    }
-
-    isEmpty(): boolean {
-        return this.items.length === 0;
+    constructor() {
+        this.stack1 = new Stack<T>();
+        this.stack2 = new Stack<T>();
     }
 }
