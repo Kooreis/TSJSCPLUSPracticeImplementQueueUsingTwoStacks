@@ -1,9 +1,10 @@
-class Stack {
-    constructor() {
-        this.items = [];
+pop() {
+        if (this.items.length == 0)
+            return "Underflow";
+        return this.items.pop();
     }
 
-    push(element) {
-        this.items.push(element);
+    isEmpty() {
+        return this.items.length == 0;
     }
 }
